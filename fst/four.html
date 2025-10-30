@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>catalog</title>
+        <style>
+            body{
+                background-color: aqua;
+                text-align: center;
+                color: rgb(173, 134, 134);
+                border-style: dashed;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Product Catalog Management</h1>
+        <input id="n" placeholder="Name">
+        <input id="p" type = "number" placeholder="Price">
+        <input id="d" placeholder="Description">
+        <button onclick="add()">ADD</button>
+        <ul id="list"></ul>
+
+        <script>
+            let products=[];
+            function add(){
+                
+                products.push({n:n.value,p:p.value,d:d.value});n.value=p.value=d.value='';sho();
+             
+            }
+            function sho(){
+                list.innerHTML=products.map(a => `<li><b>${a.n}</b> - $${a.p} (${a.d})</li>`).join(" ");
+            }
+            
+        </script>
+
+    </body>
+    
+</html>

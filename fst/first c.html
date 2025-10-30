@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{text-align:center;font-family:sans-serif}
+nav a{margin:5px;color:white;background:#4CAF50;padding:5px;text-decoration:none}
+form{margin:20px auto;width:200px;display:flex;flex-direction:column}
+</style>
+</head>
+<body>
+<h1>site</h1>
+<nav><a href="#">Home</a>
+    <a href="#">Email</a>
+    <a href="#">Contact</a>
+</nav>
+<form onsubmit="event.preventDefault();alert('Thank you '+name.value)">
+<input id="name" placeholder="Name">
+<input type="email" placeholder="Email">
+<button>Submit</button></form>
+<footer>&copy;2024 my page</footer>
+</body>
+</html>

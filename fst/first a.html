@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{font-family:sans-serif;text-align:center;background-color: #e29494;}
+#chat{border:1px solid #ccc;height:200px;overflow-y:auto;margin:10px}
+.msg{background:#cef;padding:5px;margin:2px;border-radius:5px}
+</style>
+</head>
+<body>
+<h2>Chat</h2>
+<div id="chat"></div>
+<input id="msg"><button onclick="send()">Send</button>
+<script>
+function send(){
+ let m=document.getElementById('msg').value;
+ if(!m)return;
+ let d=document.createElement('div');
+ d.className='msg'; d.textContent=m;
+ chat.appendChild(d); msg.value='';
+ chat.scrollTop=chat.scrollHeight;
+}
+</script>
+</body>
+</html>
